@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    background: black;
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+body::-webkit-scrollbar {
+    width: 10px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 100px; /* 스크롤바의 길이 */
+    background: #ffffff; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(151, 151, 151, 0.1);  /*스크롤바 뒷 배경 색상*/
+}
+
+a {
+    text-decoration: none;
+    /* 하이퍼링크 텍스트 스타일 제거 */
+    color: inherit;
+}
+
+#wrap {
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+
+
+/*--header-------------------------------------------------*/
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.logo {
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    position: relative;
+}
+
+.logo a {
+    font-weight: bold;
+}
+
+.logo span {
+    width: 1px;
+    border: 2.9px solid rgb(255, 255, 255);
+    margin-top: -9px;
+    margin-left: -55px;
+}
+
+.logo:hover span {
+    width: 100px;
+    transition: all 0.2s ease;
+    margin-left: 45px;
+}
+
+/*--nav--------------*/
+
+nav {
+    width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    /* 수평 가운데 정렬 */
+    align-items: center;
+    /* 수직 가운데 정렬 */
+    height: 100%;
+    /* ul의 높이를 100%로 설정해서 헤더 높이와 동일하게 만듭니다 */
+}
+
+nav ul li {
+    padding: 0 70px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+/*--section main-------------------------------------------------*/
+
+#main {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main p {
+    color: #fff;
+    font-size: 200px;
+    font-weight: bold;
+}
+
+/*--section about me-------------------------------------------------*/
+
+#aboutme {
+    width: 100%;
+    height: 750px;
+    /* background-color: pink; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#aboutme span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.about p {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.s1 {
+    opacity: 25%;
+    margin: 70px 0 40px 0;
+}
+.s2 {
+    opacity: 66%;
+    margin-bottom: 40px;
+}
+.s3 {
+    opacity: 100%;
+    margin-bottom: 70px;
+}
+
+#aboutme ul li {
+    list-style: none;
+    font-size: 25px;
+    line-height: 150%;
+}
+
+
+/*--section skill-------------------------------------------------*/
+
+#skill {
+    /* background: pink; */
+    width: 100%;
+    height: 850px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.sk p {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 150px;
+}
+
+.scrollable-list {
+    display: flex; /* 리스트 항목을 가로로 배열한다. */
+    /* overflow-x: scroll; */
+    white-space: nowrap; /* 리스트 항목이 한 줄에 표시되도록 함 */
+    transition: transform 0.5s; /* 스크롤 애니메이션을 부드럽게 적용 */
+}
+
+.scrollable-list li {
+    width: 400px;
+    height: 200px;
+
+    background: #1D1D1D;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin: 0 50px;
+
+    transform: translateX(247%); /* 초기에 항목을 왼쪽으로 숨김 */
+}
+
+.scrollable-list li h3 {
+    width: 350px;
+    height: 20%;
+    border-bottom: 1px solid #535353;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollable-list li p {
+    height: 80%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*--section work-------------------------------------------------*/
+
+#work {
+    /* background: pink; */
+    width: 100%;
+    height: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.work p {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.w_k {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.w_k li {
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    list-style: none;
+    position: relative;
+}
+
+.w_k li p {
+    color: #fff;
+}
+
+.w_kp1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.w_kp2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.w_k li img {
+    width: 600px;
+}
+
+.w_k li:first-child {
+    margin-left: 100px;
+}
+.w_k li:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 800px;
+    margin-top: -70px;
+}
+.w_k li:nth-child(3) {
+    margin-left: 100px;
+    margin-top: -70px;
+}
+
+/*--section contact-------------------------------------------------*/
+
+#contact {
+        /* background: pink; */
+        width: 100%;
+        height: 1080px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+}
+
+.ct p {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.ct_contents {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.ct_contentsleft {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ct_contentsleft p {
+    font-size: 23px;
+    line-height: 150%;
+}
+
+.ct_contentsright {
+    width: 50%;
+}
+
+.ct_contentsright ul {
+    padding: 0 30px;
+}
+
+.ct_contentsright ul li {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.email {
+    width: 600px;
+    height: 40px;
+    background: black;
+    border-bottom: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.message {
+    width: 600px;
+    height: 40px;
+    background: black;
+    border-bottom: 1px solid #fff;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    margin-left: 1170px;
+    background: black;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    color: #fff;
+}
+.btn:hover {
+    background: #fff;
+    border: solid 1px black;
+    color: black;
+} 
+
+/*--footer-------------------------------------------------*/
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    border-top: 1px solid #fff;
+    color: #fff;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: center;
+    margin: 0 140px;
+}
+footer ul li {
+    line-height: 150%;
+}
+
+.logo2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: -17px;
+}
+
+.logo2 a {
+    padding: 0 20px;
+    width: 20%;
+    font-weight: bold;
+}
+
+.logo2 span {
+    width: 1px;
+    border: 2.9px solid rgb(255, 255, 255);
+    margin-top: -9px;
+    margin-left: 15px;
+}
+
+.logo2:hover span {
+    width: 100px;
+    transition: all 0.2s ease;
+    margin-left: 110px;
+}
