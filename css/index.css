@@ -759,7 +759,7 @@ svg {
     padding: 0.7vw;
     list-style: none;
     position: relative;
-    opacity: 1;
+    opacity: 0;
 }
 
 
