@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <style>
+        .skill1 {
+    width: 23vw;
+    height: 12.5vw;
+    color: #ffffff;
+    background-color: #1D1D1D;
+    border: solid 0.15vw #ffffff;
+    border-radius: 0.5vw;
+
+    margin-top: 9%;
+    margin-left: 22%;
+}
+
+
+.ms1t {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 20%;
+    border-bottom: solid 1px #ffffff;
+    margin-left: 0.7vw;
+}
+
+
+.ms1t h1 {
+    font-size: 1.1vw;
+    margin-left: 0.5vw;
+}
+
+.ms1t p {
+    font-size: 0.75vw;
+    margin-left: 0.5vw;
+}
+
+.ms1t ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin-left: 5vw;
+}
+
+.ms1t ul li {
+    display: flex;
+    margin-right: 0.3vw;
+    list-style-type: none;
+}
+
+
+.ms1t ul li img {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+
+.ms1b {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms1b h1 {    
+    margin-top: -2vw;
+    font-size: 3.5vw;
+}
+    </style>
+</head>
+<body>
+    <div class="skill1">
+        <div class="ms1t">
+            <h1>SKILL</h1>
+            <p><a href="https://github.com/nyoungs117">nyoungs117.github.com</a></p>
+            <ul>
+                <li><img class="small" src="./img/s_key.png" alt="창 축소 키 이미지"></li>
+                <li><img src="./img/b_key.png" alt="창 확대 키 이미지"></li>
+                <li><img src="./img/c_key.png" alt="창 닫는 키 이미지"></li>
+            </ul>
+        </div>
+        <div class="ms1b">
+            <h1>ES5</h1>
+        </div>
+    </div>
+
+
+    <script>
+          //.skill3 html5 축소
+  document.addEventListener("DOMContentLoaded", function() {
+    const samllImage = document.querySelector(".small");
+    const h1Text = document.querySelector(".ms1b h1");
+
+    let isShrunk = false;
+
+    shrinkImage.addEventListener("click", function() {
+        isShrunk = !isShrunk; // 토글 상태 업데이트
+
+        if (isShrunk) {
+            this.style.width = "21vw";
+            this.style.height = "10.5vw";
+            h1Text.style.fontSize = "1.5vw";
+            h1Text.textContent = "저는 기본이 되는 마크업 조차도 구현할 줄 몰랐어요";
+        } else {
+            this.style.width = ""; // 기본값으로 돌아가게 설정
+            this.style.height = "";
+            h1Text.style.fontSize = "3.5vw"; // 기본값으로 돌아가게 설정
+            h1Text.textContent = "ES5"; // 기본값으로 돌아가게 설정
+        }
+    });
+});
+    </script>
+</body>
+</html>
