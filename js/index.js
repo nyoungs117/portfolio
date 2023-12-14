@@ -123,7 +123,6 @@ $(document).ready(function() {
 
 
 
-
   // #aboutme 에 화면이 도달하면 svg도 그려지고 
   // strong으로 된 텍스트가 1초 후 순차적으로 컬러가 바뀌게
 
